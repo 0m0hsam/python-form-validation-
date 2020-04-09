@@ -1,0 +1,25 @@
+#python 3.7.1
+import random 
+import string
+print ("email")
+firstname =(input("Firstname :"))
+firstname2=firstname[0:2]
+lastname =(input("Last name :"))
+lastname2=lastname[0:2]
+email=(input("Email :"))
+User1=[firstname,lastname,email]
+
+def randomString(stringLength=5):
+    """Generate a random string of fixed length """
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
+print ("would you like to use this password:", randomString()+firstname2+lastname2)
+cmd=(input("Enter Yes or No:"))
+if cmd=="YES":
+      print("Welcome onboard "+firstname)
+elif cmd=="NO":
+       user_password=(input("Enter your password not less 7 character:"))
+            
+       if(len(user_password) < 7):              
+            user_password=(input("Enter password not less 7 character:"))
+              
