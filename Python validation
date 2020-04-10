@@ -15,7 +15,7 @@ def randomString(stringLength=5):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(stringLength))
 print ("would you like to use this password:", randomString()+firstname2+lastname2)
-cmd=(input("Enter Y or N:"));
+cmd=(input("Enter Y for Yes or N of NO:"));
 
 if cmd=="Y":
       print("Welcome onboard "+firstname);
